@@ -1,0 +1,30 @@
+# configs/fourrooms_oc_8.yaml
+env:
+  goal_switch_episode: 1000
+  fail_prob: 0.3333333333
+  max_steps_per_episode: 500
+  reward_goal: 1.0
+  reward_default: 0.0
+  gamma: 0.99
+
+agent:
+  num_options: 8
+  num_actions: 4
+  temperature: 0.001
+  alpha_critic: 0.5
+  alpha_theta: 0.25
+  alpha_beta: 0.25
+  epsilon_option: 0.0
+
+train:
+  episodes: 1500
+  seeds: 0-99
+  log_every: 1
+
+io:
+  results_dir: results
+  raw_dir: results/raw
+  plots_dir: plots
+  aggregates_dir: results/aggregates
+  aggregate_file: oc_fourroom.pkl
+  plot_file: oc_fourroom.png

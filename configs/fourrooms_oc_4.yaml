@@ -1,0 +1,30 @@
+# configs/fourrooms_oc_4.yaml
+env:
+  goal_switch_episode: 1000
+  fail_prob: 0.3333333333
+  max_steps_per_episode: 500
+  reward_goal: 1.0
+  reward_default: 0.0
+  gamma: 0.99
+
+agent:
+  num_options: 4
+  num_actions: 4
+  temperature: 0.001
+  alpha_critic: 0.5          # as per paper appendix
+  alpha_theta: 0.25          # intra-option policy gradient lr
+  alpha_beta: 0.25           # termination gradient lr
+  epsilon_option: 0.0        # greedy policy over options (can change to 0.1 if desired)
+
+train:
+  episodes: 1500
+  seeds: 0-99               # inclusive range (350 runs like the paper). Use smaller for quick tests.
+  log_every: 1
+
+io:
+  results_dir: results
+  raw_dir: results/raw
+  plots_dir: plots
+  aggregates_dir: results/aggregates
+  aggregate_file: oc_fourroom.pkl
+  plot_file: oc_fourroom.png
