@@ -73,24 +73,6 @@ python main_cpd.py --seed_range 0-99 --episodes 1500
 python main.py --both --record_gif
 ```
 
-## 📁 Project Structure
-
-```
-Fourroom/
-├── agents/                 # Agent implementations
-│   └── option_critic.py   # Baseline Option-Critic agent
-├── cpd/                   # CPD implementation
-│   ├── main_cpd.py       # Main CPD experiment runner
-│   ├── transformer_cpd.py # CPD agent implementation
-│   └── cpd_logs/         # Results and visualizations
-├── envs/                  # Environment definitions
-│   └── fourrooms.py      # Four Rooms environment
-├── configs/              # Configuration files
-├── results/              # Experiment results
-├── scripts/              # Analysis and plotting scripts
-└── main.py              # Main experiment runner
-```
-
 ## How It Works
 
 ### 1. **Learning Phase** (Episodes 1-1000)
@@ -170,34 +152,7 @@ The project generates several types of visualizations:
 3. **Robust Detection**: Reliably detects goal changes across different seeds
 4. **Smart Intervention**: Provides optimal actions when confident
 
-## 🛠️ Development
 
-### Adding New Features
-1. **New Environments**: Add environment class in `envs/`
-2. **New Agents**: Implement agent class in `agents/`
-3. **New CPD Methods**: Extend `transformer_cpd.py`
-
-### Running Tests
-```bash
-# Run basic tests
-python -m pytest test/
-
-# Run specific test
-python test/test_env_goal_shift.py
-```
-
-### Debugging
-- Enable debug logging in `cpd/main_cpd.py`
-- Check CSV logs in `cpd/cpd_logs/logs/`
-- Analyze GIF visualizations in `cpd/cpd_logs/gifs/`
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
-5. Submit a pull request
 
 ## 📚 References
 
@@ -205,11 +160,7 @@ python test/test_env_goal_shift.py
 - **Change Point Detection**: [Adams & MacKay, 2007]
 - **Four Rooms Environment**: [Sutton et al., 1999]
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Built for research on adaptive reinforcement learning
 - Inspired by the need for agents that can handle environment changes
