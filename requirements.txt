@@ -1,0 +1,10 @@
+numpy==1.24.4
+matplotlib==3.7.1
+gym==0.26.2
+PyYAML==6.0
+tqdm==4.66.4
+pandas==2.0.3
+imageio==2.34.0
+
+#executioon commands executes both oc 4 and oc 8 to save gif
+#python main.py --both --record_gif      
